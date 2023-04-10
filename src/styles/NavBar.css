@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+
+
+:root {
+    background: linear-gradient(to right, #e3dedd, #dfd2d0);
+	--mainColor: #eae5e4;
+	--mainColorLight: #5767aa;
+	--secondaryColor: #db2b39;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 70px;
+	padding: 0 2rem;
+	/* background: #f9f7f7; */
+	--textColor: #000000;
+    /* box-shadow: 0 5px 4px 0 rgba(0,0,0,.5); */
+    border-radius: 20px;
+    position: absolute;
+	width: 100%;
+    top: 20px;
+	/* margin: 0px 20px; */
+	z-index: 2;
+
+}
+
+/* LOGO */
+
+header img {
+	padding: 0%;
+	margin: 0%;
+    height: 50px;
+}
+
+header img:hover{
+	filter:invert(100%);
+	transition: 0.3s ease;
+}
+
+
+/* middle links */
+
+header .mid {
+    text-decoration: none;
+    padding: 3px 17px;
+    /* border: 2px solid rgb(255, 255, 255); */
+    color: rgb(255, 255, 255);
+	margin-right: 26px;
+	border-radius: 3px;
+	transition: 0.3s ease;
+	font-weight: 700;
+}
+
+header .mid:hover {
+	/* color: var(--secondaryColor); */
+	text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease;
+}
+
+
+/* right link */
+
+header .log {
+    text-decoration: none;
+    padding: 7px 20px;
+	background-color: #FF6719;
+    color: rgb(255, 255, 255);
+	margin-right: 26px;
+	border-radius: 15px;
+	transition: all ease-in-out 0.2s;
+	font-weight: 700;
+	position: absolute;
+	right: 15px;
+}
+
+header .log:hover {
+	border-radius: 0px;
+	transition: 0.3s ease;
+    /* background-color: transparent; */
+	/* border: 1.5px solid rgb(255, 255, 255); */
+    /* color: rgb(255, 255, 255); */
+
+}
+
+
+
+header .loj {
+    text-decoration: none;
+    padding: 5px 15px;
+	background-color: transparent;
+    color: rgb(255, 255, 255);
+	margin-right: 26px;
+	/* border-radius: 15px; */
+	border: 1.5px solid rgb(255, 255, 255);
+	transition: all ease-in-out 0.2s;
+	font-weight: 700;
+	position: absolute;
+	right: 120px;
+}
+
+header .loj:hover {
+	border-radius: 0px;
+	transition: 0.3s ease;
+    background-color: #ffffff;
+	/* border: 1.5px solid rgb(255, 255, 255); */
+    color: rgb(0, 0, 0);
+
+}
+
+
+
+/*  */
+
+header .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+header nav {
+	display: flex;
+	align-items: center;
+}
+
+
+/* responsive Mobile Part */
+
+@media only screen and (max-width: 1024px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header nav {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: rgb(171, 153, 153);;
+		transition: 1s;
+	}
+
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	header nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	header nav a {
+		font-size: 1.5rem;
+		left: 0%;
+	}
+	header .log {
+		text-decoration: none;
+		padding: 5px 17px;
+		border: 2px solid rgb(0, 0, 0);
+		background-color: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
+		margin-right: 26px;
+		border-radius: 25px;
+		transition: 0.3s ease;
+		font-weight: 700;
+		position: relative;
+		right: 0;
+	}
+	header .loj {
+		text-decoration: none;
+		padding: 5px 17px;
+		border: 0px;
+		background-color: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
+		margin-right: 26px;
+		/* border-radius: 25px; */
+		transition: 0.3s ease;
+		font-weight: 700;
+		position: relative;
+		right: 0;
+	}
+}
